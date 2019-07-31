@@ -1,0 +1,4 @@
+Ипатьев - PHP Database Tutorial: "The Only Proper PDO Tutorial" - https://phpdelusions.net/pdo
+Christian Blouin - Daedalus Project
+Emil Devantie Brockdorff - CSS Flowchart. Retrieved from https://codepen.io/Mestika/pen/PwVROV
+Unknown Author - CSS Family Tree. Retrieved from http://thecodeplayer.com/walkthrough/css3-family-tree

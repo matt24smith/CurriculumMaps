@@ -1,0 +1,398 @@
+/* Navigation and Sidebar Styles -- header.php / footer.php */
+.title-bar {
+    /*margin-bottom: 30px;*/
+    background-color: #fff;
+    border-bottom: 0.25px solid #e0e0e0;
+    border-right: 0.25px solid #e0e0e0;
+
+    width: 280px;
+    position: sticky !important;
+}
+
+.title-bar img {
+    height: 33px; /* dal */
+    /*height: 75px;*/ /* dal-shhp */
+    margin-right: 10px;
+    overflow: show;
+    vertical-align: middle;
+}
+
+.title-bar-text {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.login-form {
+    padding: 0 1.25rem;
+}
+
+.login-form  input {
+    font-size: 12px;
+}
+
+.login-form input[type="user"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.login-form input[type="password"] {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.sidebar {
+    /*min-width: 250px;
+    max-width: 250px;*/
+    min-width: 280px;
+    max-width: 280px;
+    /*margin-top: -30px*/
+    border-right: 0.25px solid #e0e0e0;
+    min-height: 100vh;
+    transition: ease 0.5s;
+    -webkit-transition: ease 0.5s; /* Safari */
+    background: #ffffff;
+    /* if we want to make the sidebar sticky */
+    position: fixed;
+    z-index: 2;
+}
+
+.sidebar.visible {
+    /*margin-left: -250px;
+    min-width: 250px;*/
+    margin-left: -280px;
+    min-width: 280px;
+    display: block;
+}
+
+.list-title {
+    font-size: 14px;
+}
+
+.list-group-item {
+    padding-left: 30px;
+    border: 0;
+}
+
+.login-form .btn-secondary {
+    padding: .375rem .75rem;
+    border: 0;
+}
+
+.login-form .btn-secondary,
+.list-group-item.active {
+    /*background-color: #d6d8db;*/
+    background-color: rgba(108, 117, 125, 0.2);
+    /*border-color: rgba(108, 117, 125, 0.2);*/
+    color: #000;
+}
+
+.login-form .btn-secondary:hover {
+    background-color: rgba(108, 117, 125, 0.3);
+    border-color: #c0c2c5;
+}
+
+.login-form .btn-secondary:active {
+    background-color: rgba(108, 117, 125, 0.4) !important;
+    border-color: #abacaf !important;
+    color: #000 !important;
+}
+
+.btn {
+   margin-bottom: 8px;
+}
+
+.dim {
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    background: #000;
+    opacity: 0.25;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: background ease 0.5s;
+    -webkit-transition: background ease 0.5s; /* Safari */
+}
+
+.menu-toggle {
+    padding: 0;
+    padding-right: 15px;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+}
+
+.container-fluid {
+    padding: 20px 30px;
+    /*min-height: 100vh;*/
+    /* To make the sidebar sticky */
+    margin-left: 280px;
+    margin-top: -61px;
+}
+
+body {
+    font-size: 12px;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+}
+
+footer {
+    /*position: absolute;
+    bottom: 0;
+    padding-bottom: 20px;*/
+}
+
+/* General Styles -- index.php */
+.welcome-text {
+    margin-bottom: 20px;
+}
+
+.welcome-text p {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0px;
+}
+
+/* General Styles -- course.php */
+.class-name-hours {
+    margin-bottom: 20px;
+}
+
+.program-title {
+    margin-bottom: 20px;
+}
+
+.program-title p,
+.class-title p {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0px;
+}
+
+.program-title h2,
+.class-title h2 {
+    font-size: 22px;
+    margin: 0px;
+}
+
+.credit-hours h2 {
+    font-size: 20px;
+    margin: 0px;
+}
+
+.credit-hours p {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0px;
+}
+
+/* Modified Bootstrap Styles */
+.card {
+    border-radius: 8px;
+    /* background-color: #E5E5EA; */
+    /* background-color: rgba(0,0,0,0.1); */
+    background-color: rgba(108, 117, 125, 0.1);
+    border: 0;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.card-text p:last-child {
+    margin-bottom: 0px;
+}
+
+.card-body a {
+    min-width: 95px;
+    margin-right: 3px;
+}
+
+.outcomes-list {
+    padding-left: 20px;
+    margin-bottom: 0px;
+}
+
+.outcomes-list li {
+    margin-bottom: 10px;
+}
+
+.outcomes-list li:last-child {
+    margin-bottom: 0px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        /*margin-left: -250px;
+        min-width: 250px;*/
+        margin-left: -280px;
+        min-width: 280px;
+        display: block;
+    }
+    .sidebar.visible {
+        margin-left: 0;
+    }
+
+    .container-fluid {
+        margin-left: auto;
+        margin-top: 20px;
+        padding-top: 0;
+    }
+
+    /*.footer {
+        margin-left: 0;
+    }*/
+
+    .navbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .card-body a {
+        margin-bottom: 7px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #sidebarToggle {
+        display: none !important;
+    }
+}
+
+/* OLD STYLESHEET (PRE-BOOTSTRAP) */
+/*
+.title-bar {
+    margin-bottom: 40px;
+}
+
+.title-bar img {
+    width: 200px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.title-bar h1 {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 0 15px;
+}
+
+.title-bar hr {
+    border-width: 0.25px;
+    margin-top: 20px;
+}
+
+.class-title p {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0px;
+}
+
+.class-title h2 {
+    font-size: 22px;
+    margin: 0px;
+}
+
+.class-title {
+    margin-bottom: 20px;
+}
+
+.card {
+    border-radius: 8px;
+    background-color: #E5E5EA;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card p {
+    font-weight: normal;
+    margin-bottom: 0px;
+}
+
+h3 {
+    font-size: 12px;
+    margin-top: 0px;
+}
+
+body {
+    margin: 35px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    padding-left: 20px;
+    margin-bottom: 0px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+li:last-child {
+    margin-bottom: 0px;
+}
+
+.sidebar .nav-link {
+    color: rgba(0,0,0,.5);
+}
+
+.sidebar .nav-link:hover {
+    color: rgba(0,0,0,.9);
+}
+
+.sidebar .nav-link:show {
+    color: rgba(0,0,0,.9);
+}
+
+.sidebar .nav-link:first-child {
+    padding-top: 0;
+}
+
+<nav class="sidebar nav navbar-nav navbar-light flex-column">
+                <a class="nav-link show" href="#">Health Promotion</a>
+                <a class="nav-link" href="#">Kinesiology</a>
+                <a class="nav-link" href="#">Therapeutic Recreation</a>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown link
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+            </nav>
+*/
+
+/* OLD SIDEBAR
+<div class="sidebar" id="sidebar">
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Programs <i class="fa fa-caret-down icon"></i>
+                    </a>
+                    <div class="list-group list-group-flush collapse" id="collapseOne" aria-labelledby="headingOne" data-parent="#sidebar">
+                        <a class="list-group-item list-group-item-action list-group-item-secondary" href="programinfo.php?prog=hpro">Health Promotion</a>
+                        <a class="list-group-item list-group-item-action list-group-item-secondary" href="programinfo.php?prog=kine">Kinesiology</a>
+                        <a class="list-group-item list-group-item-action list-group-item-secondary" href="programinfo.php?prog=recm">Recreation Management</a>
+                        <a class="list-group-item list-group-item-action list-group-item-secondary" href="programinfo.php?prog=rect">Therapeutic Recreation</a>
+                    </div>
+                    <a class="list-group-item list-group-item-action collapsed" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Courses <i class="fa fa-caret-down"></i>
+                    </a>
+                    <div class="list-group list-group-flush collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#sidebar">
+                        <a class="list-group-item list-group-item-action list-group-item-secondary">HAHP</a>
+                        <a class="list-group-item list-group-item-action list-group-item-secondary">HPRO</a>
+                        <a class="list-group-item list-group-item-action list-group-item-secondary">KINE</a>
+                        <a class="list-group-item list-group-item-action list-group-item-secondary">LEIS</a>
+                    </div>
+                </div>
+            </div>
+*/
