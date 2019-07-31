@@ -10,7 +10,7 @@ Joanna Bistekos
 ### Winter Term Development Team
 Matthew Smith  
 Joanna Bistekos  
-Abdullah Nehahban  
+Abdullah Negahban  
 Jiali Jin  
 Julia Olmstead  
 
