@@ -5,17 +5,14 @@
  * Dalhousie Bluenose webserver
  * MySQL Version 10.3.14-MariaDB
  */
-$sqlhost    = 'https://link-to-mysql-server:3306';
-$user       = 'username';
-$pass       = 'password';
-$sqldb      = '`cmaps`';
-$charset    = 'utf8';
-$dsn        = "mysql:host=$sqlhost;charset=$charset";
-//$dsn      = "mysql:host=$sqlhost;dbname=$sqldb;charset=$charset";
+//var_dump($_SERVER);
+$inifile = $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/cmaps_cfg.ini';
+$ini = parse_ini_file($inifile);
+$db_dsn        = "mysql:host=".$ini['db_sqlhost'].";charset=".$ini['db_charset'];
 
 date_default_timezone_set("America/Halifax");
 
-$options = [
+$db_options = [
    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
    //PDO::ATTR_EMULATE_PREPARES   => false,

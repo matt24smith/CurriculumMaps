@@ -10,8 +10,8 @@
  */
 
 $config = include('sqlconfig.php');
-$db = new PDO($dsn, $user, $pass, $options);
-$db->exec("USE $sqldb");
+$db = new PDO($db_dsn, $ini['db_user'], $ini['db_pass'], $db_options);
+$db->exec("USE ".$ini['db_name']);
 
 function importSqlFile($pdo, $sqlfile, $tablePrefix=null, $InFilePath=null, $loglevel=0) {
    // $PDO == db object
@@ -25,19 +25,19 @@ function importSqlFile($pdo, $sqlfile, $tablePrefix=null, $InFilePath=null, $log
       foreach ($lines as $line) {
          // skip comments
          if (substr($line, 0, 2) == '--' || trim($line) == '') { continue; }
-      // read and replace prefix
-      $line = str_replace(['<<prefix>>', '<<InFilePath>>'], [$tablePrefix, $InFilePath], $line);
-      $tmpLine .= $line;  // add line to current segment
-      if (substr(trim($line), -1, 1) == ';') {  // if semicolon, EOL
-         if ($loglevel == 0){ verboseQuery($tmpLine); } 
-      try {
-         $pdo->exec($tmpLine); 
-      } catch (\PDOException $e) {
-         errorMsg($e, $tmpLine, $sqlfile);
-         $errorDetect = true;
-      }
-      $tmpLine = '';  // reset temp var to empty
-      }
+         // read and replace prefix
+         $line = str_replace(['<<prefix>>', '<<InFilePath>>'], [$tablePrefix, $InFilePath], $line);
+         $tmpLine .= $line;  // add line to current segment
+         if (substr(trim($line), -1, 1) == ';') {  // if semicolon, EOL
+            if ($loglevel == 0){ verboseQuery($tmpLine); } 
+            try {
+               $pdo->exec($tmpLine); 
+            } catch (\PDOException $e) {
+               errorMsg($e, $tmpLine, $sqlfile);
+               $errorDetect = true;
+            }
+            $tmpLine = '';  // reset temp var to empty
+         }
       }
       if ($errorDetect) { return false; }
    } catch (\Exception $e) {
