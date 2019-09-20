@@ -10,7 +10,7 @@ This website was developed for the school of health and human performance with f
 rest of the information in the database
 
 ### Contributors
-Matthew Smith
+Matthew Smith  
 Joanna Bistekos  
 Abdullah Negahban  
 Jiali Jin  
