@@ -9,25 +9,13 @@ This website was developed for the school of health and human performance with f
 - Administrators can quickly interface the content management system to input content in a manner that is consistent with the 
 rest of the information in the database
 
-### Team Lead
+### Contributors
 Matthew Smith
-
-### Lead Designer
-Joanna Bistekos
-
-### Winter Term Development Team
-Matthew Smith  
 Joanna Bistekos  
 Abdullah Negahban  
 Jiali Jin  
 Julia Olmstead  
-
-### Summer Term Development Team
-Matthew Smith  
 Yuchen (Blare) Dai  
 Fahad ALFaleh  
 Matt Nguyen  
-
-
-
 
