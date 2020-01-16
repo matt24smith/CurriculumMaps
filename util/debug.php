@@ -11,7 +11,7 @@ header();
 ini_set('display_errors', 1); 
 error_reporting(E_ALL);
 
-include_once('includes/db.php');
+include_once('../html/includes/db.php');
 $loglevel=1;
 
 // load the sql files containing backup data

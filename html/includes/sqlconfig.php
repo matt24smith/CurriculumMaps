@@ -6,9 +6,10 @@
  * MySQL Version 10.3.14-MariaDB
  */
 //var_dump($_SERVER);
-$inifile = $_SERVER['CONTEXT_DOCUMENT_ROOT'].'/cmaps_cfg.ini';
+$inifile = '../cmaps_cfg.ini';
+
 $ini = parse_ini_file($inifile);
-$db_dsn        = "mysql:host=".$ini['db_sqlhost'].";charset=".$ini['db_charset'];
+$db_dsn = "mysql:host=".$ini['db_sqlhost'].";charset=".$ini['db_charset'];
 
 date_default_timezone_set("America/Halifax");
 
