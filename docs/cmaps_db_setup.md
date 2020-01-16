@@ -1,7 +1,7 @@
 # Database Config
 Set up a MySQL database (InnoDB) with the following configuration.
 MariaDB was used as the development MySQL implementation. It was chosen for 
-widespread community adaptation, documentation, and is open source. 
+widespread community adoption, documentation, and is open source. 
 
     CREATE DATABASE cmaps;
     GRANT ALL PRIVILEGES ON cmaps.* TO 'cmapsproject'@'%' IDENTIFIED BY 'somepassword' WITH GRANT OPTION;
@@ -19,7 +19,7 @@ allow remote webserver connections.
  * create a free domain using DuckDNS.org. use the following bash script 
    executed with a cron job to point your domain to your database server
 
-```
+```bash
     #! /bin/bash
     duckdns_domain="NEWDOMAIN.duckdns.org"
     duckdns_token="YOURTOKENHERE"               # view DuckDNS website on how to get your token
@@ -29,9 +29,9 @@ allow remote webserver connections.
 ```
 
  * the cron entry itself (you will need to update the path to your script accordingly):
-
-    */5 * * * * /home/matt/ddns/ddns.sh >/dev/null 2>&1
-
+```
+*/5 * * * * /home/matt/ddns/ddns.sh >/dev/null 2>&1
+```
 ## Upload SQL Data to the database
 Once the database server is running and can be accessed from WAN, upload the
 SQL data to the database. the importSqlFile php script is included in the 
